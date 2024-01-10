@@ -7,6 +7,8 @@ class FireDynamics:
 
     def fire_dynamics_model(self,X):
         """fire flow dynamics"""
+        wind_x=WIND_DIRECTION_PARAMETER[0]
+        wind_y=WIND_DIRECTION_PARAMETER[1]
         nx, ny = AREA_X, AREA_Y
         X1 = np.zeros((ny, nx))
         for ix in range(1,nx-1):
@@ -19,6 +21,7 @@ class FireDynamics:
                         
                         if X[iy+dy,ix+dx] == FIRE:
                             X1[iy,ix] = FIRE
+                            X1[iy+wind_y,ix+wind_x] = FIRE
                             break
                 else:                    
                     for point in IGNITION_POINTS:                        

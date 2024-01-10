@@ -13,6 +13,7 @@ BOUNDS = [0,1,2,3]
 INTERVAL=100
 FRAME_RATE=200
 IGNITION_POINTS=[(50,30)] 
+WIND_DIRECTION_PARAMETER=[0,0]
 
 
 """
@@ -21,6 +22,6 @@ IGNITION_POINTS=[(50,30)]
 IGNITION_POINTS= Modify or add additional coordinates separated by comma to add custom ignition points.
 FUEL_ADDITION_PROBABILITY= Add fuel probability set to 0 by default. If fuel is added after post burning, adjust the value to <=1.
 FUEL_DISTRIBUTION_PROBABILITY= Currently set to 40% modify necessarily.
-
+WIND_DIRECTION_PARAMETER= Values representiing wind direction (vales from -1 to 1) default is [0,0]
 
 """

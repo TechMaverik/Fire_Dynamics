@@ -27,3 +27,7 @@ class FireDynamics:
                     for point in IGNITION_POINTS:                        
                         X1[point[0],point[1]] = FIRE              
         return X1
+    
+
+                
+        

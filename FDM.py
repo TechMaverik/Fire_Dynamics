@@ -1,3 +1,4 @@
+"""FDM"""
 import ast
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -9,9 +10,9 @@ from Models_Archive.FDM_Models import FireDynamics
 cmap = colors.ListedColormap(COLOR_LIST)
 norm = colors.BoundaryNorm(BOUNDS, cmap.N)
 
-file=open(COORDINATE_PATH,"r")
+coordinate_file=open(COORDINATE_PATH,"r")
 LOADER_LIST=[]
-for each in file:    
+for each in coordinate_file:    
     x = ast.literal_eval(each)
     LOADER_LIST.append(x)
 

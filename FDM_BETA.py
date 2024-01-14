@@ -1,29 +1,43 @@
-"""FDM"""
-import ast
+"""FDM_BETA"""
+
 import numpy as np
 import matplotlib.pyplot as plt 
 from matplotlib import animation
 from matplotlib import colors
 from Models_Constants.FDM_Parameters import *
 from Models_Archive.FDM_Models import FireDynamics
+import time
+
+X_DATA=X_DATA_LIST
+Y_DATA=Y_DATA_LIST
 
 cmap = colors.ListedColormap(COLOR_LIST)
 norm = colors.BoundaryNorm(BOUNDS, cmap.N)
 
-coordinate_file=open(COORDINATE_PATH,"r")
-LOADER_LIST=[]
-for each in coordinate_file:    
-    x = ast.literal_eval(each)
-    LOADER_LIST.append(x)
+XCoordinates_Archive=open(XFILE,"r")
+YCoordinates_Archive=open(YFILE,"r")
+
+for line in XCoordinates_Archive:
+    line = line.strip()
+    X_DATA.append(line)
+
+for line in YCoordinates_Archive:
+    line = line.strip()
+    Y_DATA.append(line)
+
+XCoordinates_Archive.close()
+YCoordinates_Archive.close()
+Total_count=len(X_DATA)
+count=COUNT_DEFAULT
 
 nx, ny = AREA_X, AREA_Y
 PLOT_MATRIX=np.zeros((ny, nx))
 
-for location in LOADER_LIST:
-    ix=int(location[0])
-    iy=int(location[1])
+while count<Total_count-1:
+    ix=int(float(X_DATA[count]))   
+    iy=int(float(Y_DATA[count]))
     PLOT_MATRIX[iy,ix]=1
-
+    count=count+1
 
 fig, ax = plt.subplots()
 ax.set_axis_off()

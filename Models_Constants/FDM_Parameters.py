@@ -12,18 +12,18 @@ INTERVAL=100
 BOUNDS = [0,1,2,3]
 INTERVAL=100
 FRAME_RATE=200
-IGNITION_POINTS=[(432,52)] 
+IGNITION_POINTS=[(0,0)] 
 WIND_DIRECTION_PARAMETER=[0,0]
-POINT_CLOUD_CONVERSION_PARAMETER=[-586358.86,-8615279.52]
-HEIGHT_FILTER=[7,2]
+HEIGHT_FILTER=[0,0]
 
-CSV_PATH="DataSet/GambaGrass_Local.csv"
-COORDINATE_PATH="DataSet/Filtered_Coordinates.txt"
-CET_TOOL_MSG="************************ FDM COORDINATE EXTRACTION TOOL ************************"
-DF_LOADING_PRG_MSG="Data Frame Loading ... [In Progress]"
-DF_LOADING_CMPT_MSG="Data Frame Loading ... [Completed]"
-LOADED_LIST_MSG="Loaded to List [Completed]"
-CPTD_MSG="[...COMPLETED...]"
+"""Generic Constants"""
+
+XFILE="DataSet\X.txt"
+YFILE="DataSet\Y.txt"
+X_DATA_LIST=[]
+Y_DATA_LIST=[]
+COUNT_DEFAULT=0
+
 
 """
 ********************************* IMPORTANT KEY PARAMETERS *********************************

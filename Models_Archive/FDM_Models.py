@@ -4,6 +4,7 @@ import numpy as np
 from Models_Constants.FDM_Parameters import *
 
 class FireDynamics:
+    """fire dynamics"""
 
     def fire_dynamics_model(self,X):
         """fire flow dynamics"""
@@ -18,16 +19,12 @@ class FireDynamics:
                 if X[iy,ix] == FUEL:
                     X1[iy,ix] = FUEL
                     for dx,dy in NEIGHBOUR:
-                        
                         if X[iy+dy,ix+dx] == FIRE:
                             X1[iy,ix] = FIRE
                             X1[iy+wind_y,ix+wind_x] = FIRE
                             break
-                else:                    
-                    for point in IGNITION_POINTS:                        
-                        X1[point[0],point[1]] = FIRE              
+                else:
+                    for point in IGNITION_POINTS:
+                        X1[point[0],point[1]] = FIRE
         return X1
     
-
-                
-        

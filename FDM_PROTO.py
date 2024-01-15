@@ -1,4 +1,4 @@
-"""FDM_BETA"""
+"""FDM_PROTO"""
 
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -6,7 +6,6 @@ from matplotlib import animation
 from matplotlib import colors
 from Models_Constants.FDM_Parameters import *
 from Models_Archive.FDM_Models import FireDynamics
-import time
 
 X_DATA=X_DATA_LIST
 Y_DATA=Y_DATA_LIST

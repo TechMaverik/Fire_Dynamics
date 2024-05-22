@@ -12,8 +12,13 @@ Simulation and Prediction system to identify how fire will spread in a given con
 * NumPy
 * Cloud compare
 ## Procedure
+
 ### FDM 2D Sim
 * Run <code>pip install -r requirements.txt</code>
 * Adjust fuel addition probability, fuel distribution probability, wind direction,ignition points etc in the FDM parameters.
 * Open new terminal in the project location.
 * Run <code>python FDM_2D_Sim.py</code>
+
+### FDM_PROTO_SIM (case study)
+* Run <code>pip install -r requirements.txt</code>
+* Run <code>python FDM_PROTO_SIM.py</code>

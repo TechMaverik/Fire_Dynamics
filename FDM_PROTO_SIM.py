@@ -1,10 +1,8 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib import animation
-from matplotlib import colors
 from Models_Constants.FDM_Parameters import *
-from Models_Archive.FDM_Models import FireDynamics
+
 
 image_path = "DataSet\Sim_data.jpg"
 area_image = cv2.imread(image_path)
@@ -38,9 +36,9 @@ IGNITION_X = 350
 IGNITION_POINTZ = []
 for param in range(100):
     IGNITION_POINTZ.append((IGNITION_X + param, IGNITION_Y - param))
-    # IGNITION_POINTZ.append((IGNITION_X - param, IGNITION_Y + param))
-    # IGNITION_POINTZ.append((IGNITION_X + param, IGNITION_Y + param))
-    # IGNITION_POINTZ.append((IGNITION_X - param, IGNITION_Y - param))
+    IGNITION_POINTZ.append((IGNITION_X - param, IGNITION_Y + param))
+    IGNITION_POINTZ.append((IGNITION_X + param, IGNITION_Y + param))
+    IGNITION_POINTZ.append((IGNITION_X - param, IGNITION_Y - param))
 
 processed_matrix = np.zeros((size_L, size_B))
 

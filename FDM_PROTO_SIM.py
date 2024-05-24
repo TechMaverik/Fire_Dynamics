@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from Models_Constants.FDM_Parameters import *
 
 
-image_path = "DataArchive\Sim_data.jpg"
+image_path = "DataArchive/Sim_data.jpg"
 area_image = cv2.imread(image_path)
 
 

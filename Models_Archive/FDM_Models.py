@@ -9,7 +9,7 @@ class FireDynamics:
     def fire_dynamics_model(self,X):
         """fire flow dynamics"""
         wind_x=WIND_DIRECTION_PARAMETER[0]
-        wind_y=WIND_DIRECTION_PARAMETER[1]
+        wind_y=-1*WIND_DIRECTION_PARAMETER[1]
         nx, ny = AREA_X, AREA_Y
         X1 = np.zeros((ny, nx))
         for ix in range(1,nx-1):
